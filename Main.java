@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int opc;
+        int opc, num;
 
         do {
             System.out.println("1. Imprimir tabla de multiplicar.");
@@ -17,7 +17,8 @@ public class Main {
 
             switch (opc) {
                 case 1:
-                    System.out.println("Opción 1.");
+                    num = Leer.leerEntero("Introduzca el número del que quiere ver toda la tabla de multiplicar: ");
+                    tablaMul(num);
                     break;
                 case 2:
                     System.out.println("Opción 2.");
@@ -40,5 +41,12 @@ public class Main {
             }
 
         } while (opc != 7);
+    }
+
+    /*Función para sacar la tabla de multiplicar a partir de un número dado en el main por un usuario.*/
+    public static void tablaMul(int num) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i  + " = " + num * i + ".");
+        }
     }
 }
