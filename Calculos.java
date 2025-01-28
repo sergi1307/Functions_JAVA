@@ -1,6 +1,9 @@
 public class Calculos {
-    public static double queDescuento(int cant, int cant_desc) {
-        return 0;
+
+    /*Función para saber el descuento que tenemos ciertos productos.*/
+    public static int queDescuento(double cant, double cant_desc) {
+        if (cant == 0) return 0;
+        return (int)(((cant - cant_desc) / cant) * 100);
     }
 
     public static int dimeSigno(int num1) {

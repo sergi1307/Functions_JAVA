@@ -1,8 +1,11 @@
+import java.net.CacheRequest;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         int opc, num1, num2, num3, resultado;
+        double cant, cantDesc;
 
         do {
             System.out.println("1. Imprimir tabla de multiplicar.");
@@ -39,7 +42,9 @@ public class Main {
                     System.out.println();
                     break;
                 case 4:
-                    System.out.println("Opción 4.");
+                    cant = Leer.leerDouble("Introduzca la cantidad sin el descuento: ");
+                    cantDesc = Leer.leerEntero("Introduzca la cantidad con el descuento: ");
+                    System.out.println("El % de descuento es: " + Calculos.queDescuento(cant, cantDesc) + "%.");
                     break;
                 case 5:
                     System.out.println("Opción 5.");
