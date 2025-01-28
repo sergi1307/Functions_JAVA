@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int opc, num1, num2, resultado;
+        int opc, num1, num2, num3, resultado;
 
         do {
             System.out.println("1. Imprimir tabla de multiplicar.");
@@ -30,7 +30,13 @@ public class Main {
                     System.out.println();
                     break;
                 case 3:
-                    System.out.println("Opción 3.");
+                    num1 = Leer.leerEntero("Introduzca el número x para comprobar: ");
+                    num2 = Leer.leerEntero("Introduzca el número y para comprobar: ");
+                    num3 = Leer.leerEntero("Introduzca el número z para comprobar: ");
+                    if (esPitagoras(num1, num2, num3)) {
+                        System.out.println("Si que es Pitágoras.");
+                    } else System.out.println("No es Pitágoras.");
+                    System.out.println();
                     break;
                 case 4:
                     System.out.println("Opción 4.");
@@ -56,7 +62,13 @@ public class Main {
         }
     }
 
+    /*Función para multiplicar dos números dados por el usuario*/
     public static int multiplica(int num1, int num2) {
         return num1 * num2;
+    }
+
+    /*Función para comprobar si los 3 números dados por el usuario cumplen la ley de Pitágoras o no*/
+    public static boolean esPitagoras(int num1, int num2, int num3) {
+        return (num1 * num1) + (num2 * num2) == (num3 * num3);
     }
 }
