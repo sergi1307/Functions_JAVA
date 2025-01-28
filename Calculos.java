@@ -6,8 +6,15 @@ public class Calculos {
         return (int)(((cant - cant_desc) / cant) * 100);
     }
 
+    /*Función para saber si el número pasado es positivo, negativo o cero*/
     public static int dimeSigno(int num1) {
-        return 0;
+        if (num1 < 0) {
+            return -1;
+        } else if (num1 > 0) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     public static double millas_a_km(int num1) {

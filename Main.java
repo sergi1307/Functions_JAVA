@@ -45,9 +45,18 @@ public class Main {
                     cant = Leer.leerDouble("Introduzca la cantidad sin el descuento: ");
                     cantDesc = Leer.leerEntero("Introduzca la cantidad con el descuento: ");
                     System.out.println("El % de descuento es: " + Calculos.queDescuento(cant, cantDesc) + "%.");
+                    System.out.println();
                     break;
                 case 5:
-                    System.out.println("Opción 5.");
+                    num1 = Leer.leerEntero("Introduzca un número entero: ");
+                    if (Calculos.dimeSigno(num1) == 1) {
+                        System.out.println("Positivo");
+                    } else if (Calculos.dimeSigno(num1) == -1) {
+                        System.out.println("Negativo");
+                    } else {
+                        System.out.println("Cero");
+                    }
+                    System.out.println();
                     break;
                 case 6:
                     System.out.println("Opción 6.");
