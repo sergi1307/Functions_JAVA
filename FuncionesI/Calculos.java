@@ -1,3 +1,5 @@
+package FuncionesI;
+
 public class Calculos {
 
     /*Función para saber el descuento que tenemos ciertos productos.*/
@@ -18,6 +20,6 @@ public class Calculos {
     }
 
     public static double millas_a_km(int num1) {
-        return 0;
+        return num1 * 1.60934;
     }
 }

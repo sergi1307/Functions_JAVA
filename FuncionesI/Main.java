@@ -1,4 +1,4 @@
-import java.net.CacheRequest;
+package FuncionesI;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -59,7 +59,9 @@ public class Main {
                     System.out.println();
                     break;
                 case 6:
-                    System.out.println("Opción 6.");
+                    num1 = Leer.leerEntero("Introduzca los km en número entero: ");
+                    System.out.println("Los millas " + num1 + " en km son: " + Calculos.millas_a_km(num1));
+                    System.out.println();
                 case 7:
                     System.out.println("Nos vemos en la próxima.");
                 default:
