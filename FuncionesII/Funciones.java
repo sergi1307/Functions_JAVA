@@ -2,8 +2,17 @@ package FuncionesII;
 
 public class Funciones {
 
+    /*Función que imprima vector pasado como parámetro separados por guiones y con salto de líneas tras imprimir el
+    * último vector*/
     public static void mostrarVectorInt(int[] vector) {
-
+        for (int i = 0; i < vector.length; i++) {
+            if (i < vector.length - 1) {
+                System.out.print(vector[i] + " - ");
+            } else {
+                System.out.print(vector[i]);
+                System.out.println();
+            }
+        }
     }
 
     public static void mostrarMatrizInt(int[][] matriz) {

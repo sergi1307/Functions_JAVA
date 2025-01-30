@@ -3,7 +3,8 @@ package FuncionesII;
 public class Main {
     public static void main(String[] args) {
 
-        int opc;
+        int[] vector1;
+        int opc, num;
 
         do {
             System.out.println("1 - MostrarVectorInt");
@@ -21,6 +22,15 @@ public class Main {
 
             switch (opc) {
                 case 1:
+                    num = Leer.leerEntero("Introduzca la longitud del vector: ");
+                    vector1 = new int[num];
+
+                    for (int i = 0; i < num; i++) {
+                        vector1[i] = Leer.leerEntero("Introduzca un número a almacenar: ");
+                    }
+
+                    System.out.println("Mostrando vector:");
+                    Funciones.mostrarVectorInt(vector1);
                     break;
                 case 2:
                     break;
