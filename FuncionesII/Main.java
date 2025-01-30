@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         int[] vector1;
-        int opc, num;
+        int[][] matriz1;
+        int opc, num1, num2;
 
         do {
             System.out.println("1 - MostrarVectorInt");
@@ -22,10 +23,10 @@ public class Main {
 
             switch (opc) {
                 case 1:
-                    num = Leer.leerEntero("Introduzca la longitud del vector: ");
-                    vector1 = new int[num];
+                    num1 = Leer.leerEntero("Introduzca la longitud del vector: ");
+                    vector1 = new int[num1];
 
-                    for (int i = 0; i < num; i++) {
+                    for (int i = 0; i < num1; i++) {
                         vector1[i] = Leer.leerEntero("Introduzca un número a almacenar: ");
                     }
 
@@ -33,6 +34,18 @@ public class Main {
                     Funciones.mostrarVectorInt(vector1);
                     break;
                 case 2:
+                    num1 = Leer.leerEntero("Introduzca las filas de la matriz: ");
+                    num2 = Leer.leerEntero("Introduzca las columnas de la matriz: ");
+
+                    matriz1 = new int[num1][num2];
+
+                    for (int i = 0; i < num1; i++) {
+                        for (int j = 0; j < num2; j++) {
+                            matriz1[i][j] = Leer.leerEntero("Introduzca el número para la posición " + i + j + " : ");
+                        }
+                    }
+
+                    Funciones.mostrarMatrizInt(matriz1);
                     break;
                 case 3:
                     break;

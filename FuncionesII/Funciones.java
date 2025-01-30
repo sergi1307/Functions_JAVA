@@ -15,8 +15,17 @@ public class Funciones {
         }
     }
 
+    /*Imprima una matriz de enteros en forma de matriz, cada fila separada por guiones.*/
     public static void mostrarMatrizInt(int[][] matriz) {
-
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j]);
+                if (j < matriz[i].length - 1) {
+                    System.out.print(" - ");
+                }
+            }
+            System.out.println();
+        }
     }
 
     public static void copiar2Vectores(int[] vector1, int[] vector2) {
