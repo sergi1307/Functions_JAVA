@@ -28,8 +28,14 @@ public class Funciones {
         }
     }
 
-    public static void copiar2Vectores(int[] vector1, int[] vector2) {
-
+    /*Recibirá dos vectores y copiará el primero al segundo, se debe comprobar que el vector origen
+    * cabe en el de destino*/
+    public static int[] copiar2Vectores(int[] vectorOrigen, int[] vectorDestino) {
+        vectorDestino = new int[vectorOrigen.length];
+        for (int i = 0; i < vectorDestino.length; i++) {
+             vectorDestino[i] = vectorOrigen[i];
+        }
+        return vectorDestino;
     }
 
     public static void copiarVector(int[] vector) {

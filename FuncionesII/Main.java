@@ -3,7 +3,7 @@ package FuncionesII;
 public class Main {
     public static void main(String[] args) {
 
-        int[] vector1;
+        int[] vector1, vector2 = new int[0];
         int[][] matriz1;
         int opc, num1, num2;
 
@@ -48,6 +48,24 @@ public class Main {
                     Funciones.mostrarMatrizInt(matriz1);
                     break;
                 case 3:
+                    num1 = Leer.leerEntero("Introduzca la longitud del vector Origen: ");
+                    vector1 = new int[num1];
+
+                    for (int i = 0; i < num1; i++) {
+                        vector1[i] = Leer.leerEntero("Introduzca el número a almacenar: ");
+                    }
+
+                    vector2 = Funciones.copiar2Vectores(vector1, vector2);
+
+                    System.out.println("El resultado del vector copiado: ");
+                    for (int i = 0; i < vector2.length; i++) {
+                        System.out.print(vector2[i]);
+                        if ( i < vector2.length - 1) {
+                            System.out.print(" - ");
+                        }
+                    }
+                    System.out.println();
+
                     break;
                 case 4:
                     break;
